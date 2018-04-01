@@ -1,7 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ul {list-style-type: none;
+margin: 0;
+padding: 0;}
+li {display: inline;
+}
+</style>
+</head>
+<body>
+
 <h1>Home</h1>
 {% block nav %}
-    <a href="{{ url_for('index') }}">Home</a><br>
-    <a href="{{ url_for('all_lists') }}">All TODO lists</a><br>
+<ul>
+
+     <li><a href="{{ url_for('index') }}">Home</a></li>
+     <li><a href="{{ url_for('all_lists') }}">All TODO lists</a></li>
+</ul>
+<br>
 {% endblock %}
 
 {% block content %}
@@ -14,3 +32,6 @@
 </form>
 
 {% endblock %}
+
+</body>
+</html>
